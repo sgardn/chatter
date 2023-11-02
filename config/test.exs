@@ -18,7 +18,7 @@ config :chatter, Chatter.Repo,
 config :chatter, ChatterWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   secret_key_base: "Zmwso9Sn77ZG5u8VFS/QY7EjPtfOBvxaHS+383rXM9A6yf3I/3Ybszdnq4oAboIS",
-  server: false
+  server: true
 
 # In test we don't send emails.
 config :chatter, Chatter.Mailer, adapter: Swoosh.Adapters.Test
@@ -31,3 +31,8 @@ config :logger, level: :warning
 
 # Initialize plugs at runtime for faster test compilation
 config :phoenix, :plug_init_mode, :runtime
+
+# https://www.tddphoenix.com/setting-up/ - enable sandbox sql
+config :chatter, :sql_sandbox, Ecto.Adapters.SQL.Sandbox
+
+config :wallaby, driver: Wallaby.Chrome
