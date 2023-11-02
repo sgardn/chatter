@@ -16,3 +16,18 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+## Test
+
+```
+mix test
+```
+
+## What is this?
+
+Following the guide here: https://www.tddphoenix.com/showing-a-list-of-chat-rooms/
+
+## Setup notes
+
+- Needed to manually configure / create the postgres database and user per env
+- Make sure chrome webdriver (installed with `npm install -v chromedriver@118.0.0`) aligns with what application version I have
