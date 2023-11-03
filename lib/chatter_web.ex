@@ -20,6 +20,7 @@ defmodule ChatterWeb do
   def static_paths, do: ~w(assets fonts images favicon.ico robots.txt)
 
   def router do
+    # https://hexdocs.pm/elixir/1.16/quote-and-unquote.html#quoting
     quote do
       use Phoenix.Router, helpers: true
 
