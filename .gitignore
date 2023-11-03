@@ -35,3 +35,5 @@ chatter-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# mac empty files
+.DS_Store

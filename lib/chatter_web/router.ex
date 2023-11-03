@@ -18,7 +18,7 @@ defmodule ChatterWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    get "/chat", ChatRoomController, :index
+    resources "/chats", ChatRoomController, only: [:new, :index]
   end
 
   # Other scopes may use custom stacks.
