@@ -9,8 +9,8 @@ defmodule Chatter.Chat.Room do
   end
 
   @doc false
-  def changeset(room, attrs) do
-    room
+  def changeset(struct, attrs) do
+    struct
     |> cast(attrs, [:name])
     |> validate_required([:name])
     |> unique_constraint(:name)

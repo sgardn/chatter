@@ -1,0 +1,10 @@
+<div>
+  <%= form_for @changeset, ~p"/chat_rooms", fn f -> %>
+    <label>
+      Name:
+      <%= text_input f, :name %>
+    </label>
+
+    <%= submit "Submit" %>
+  <% end %>
+</div>
